@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronit Bhalla | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f2340;
+      --accent: #c8a24a;
+      --text: #1f2933;
+      --muted: #5f6b7a;
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --border: #e3e7ed;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--navy);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 6%;
+    }
+    nav .logo { color: #fff; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
+    nav ul { list-style: none; display: flex; gap: 24px; }
+    nav a { color: #dfe6ef; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    nav a:hover { color: var(--accent); }
+
+    header {
+      background: linear-gradient(135deg, var(--navy), #1d3a63);
+      color: #fff;
+      padding: 90px 6% 80px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.6rem; margin-bottom: 8px; }
+    header .subtitle { color: var(--accent); font-weight: 600; margin-bottom: 24px; }
+    header .statement {
+      max-width: 720px; margin: 0 auto;
+      font-size: 1.15rem; color: #e8edf4;
+    }
+    .buttons { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 10px 22px; border-radius: 6px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    }
+    .btn-primary { background: var(--accent); color: var(--navy); }
+    .btn-outline { border: 2px solid #fff; color: #fff; }
+    .btn:hover { opacity: 0.85; }
+
+    section { padding: 70px 6%; max-width: 1100px; margin: 0 auto; }
+    section h2 { font-size: 1.8rem; color: var(--navy); margin-bottom: 8px; }
+    .underline { width: 60px; height: 4px; background: var(--accent); margin-bottom: 32px; border-radius: 2px; }
+
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;
+    }
+    .skill-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 22px;
+    }
+    .skill-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: #eef2f7; color: var(--navy);
+      padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;
+    }
+
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;
+    }
+    .project-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-top: 4px solid var(--accent);
+      border-radius: 10px; padding: 26px;
+      display: flex; flex-direction: column;
+    }
+    .project-card h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 4px; }
+    .project-card .org { color: var(--muted); font-size: 0.9rem; margin-bottom: 14px; }
+    .project-card p { font-size: 0.95rem; margin-bottom: 18px; flex-grow: 1; }
+    .project-card a {
+      color: var(--navy); font-weight: 600; text-decoration: none;
+      border-bottom: 2px solid var(--accent); align-self: flex-start;
+    }
+
+    footer {
+      background: var(--navy); color: #c9d3df;
+      text-align: center; padding: 30px 6%; font-size: 0.9rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { flex-direction: column; gap: 10px; }
+      nav ul { gap: 16px; }
+      header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Ronit Bhalla</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PERSONAL STATEMENT -->
+  <header id="about">
+    <h1>Ronit Bhalla</h1>
+    <p class="subtitle">Finance &amp; Business Analytics | Rutgers Business School</p>
+    <p class="statement">
+      I am a finance student at Rutgers Business School concentrating in Business Analytics,
+      combining hands on wealth management experience with financial analysis to build a career
+      in investment banking and private equity.
+    </p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/ronitbhalla/" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="underline"></div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Financial Analysis</h3>
+        <div class="tags">
+          <span class="tag">FP&amp;A</span>
+          <span class="tag">Margin Analysis</span>
+          <span class="tag">Revenue Trend Analysis</span>
+          <span class="tag">International Finance</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Business Development</h3>
+        <div class="tags">
+          <span class="tag">Client Prospecting</span>
+          <span class="tag">Market Research</span>
+          <span class="tag">HNW Client Acquisition</span>
+          <span class="tag">Networking</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Tools &amp; Technical</h3>
+        <div class="tags">
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">HubSpot CRM</span>
+          <span class="tag">Business Analytics</span>
+          <span class="tag">PowerPoint</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Leadership</h3>
+        <div class="tags">
+          <span class="tag">Event Planning</span>
+          <span class="tag">Sponsorship Outreach</span>
+          <span class="tag">Team Leadership</span>
+          <span class="tag">Client Service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="underline"></div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Cost Margin &amp; Revenue Trend Analysis</h3>
+        <div class="org">Earth Stone &amp; Tile</div>
+        <p>
+          Analyzed cost margins and revenue trends as part of FP&amp;A work, identifying where
+          the business was gaining and losing profitability and turning the numbers into
+          insights management could act on.
+        </p>
+        <a href="earth-stone.html">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>High Net Worth Market Research</h3>
+        <div class="org">Breakaway Wealth Management</div>
+        <p>
+          Researched and prospected high net worth clients for a Hoboken wealth management
+          firm, building outreach lists and tracking the client pipeline in HubSpot CRM to
+          support new client acquisition.
+        </p>
+        <a href="breakaway.html">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Corporate Sponsorship Partnership</h3>
+        <div class="org">Chi Phi Fraternity</div>
+        <p>
+          Led outreach that secured Red Bull as a sponsor for the chapter, pitching the
+          partnership and coordinating the relationship while also serving as Philanthropy Chair.
+        </p>
+        <a href="chi-phi.html">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <p>Let's connect: <a href="mailto:ronitbhalla@gmail.com">ronitbhalla@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/ronitbhalla/" target="_blank">LinkedIn</a></p>
+    <p style="margin-top:8px;">&copy; 2026 Ronit Bhalla</p>
+  </footer>
+
+</body>
+</html>
